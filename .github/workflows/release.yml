@@ -4,8 +4,9 @@ on:
   push:
     tags:
       - "*"
-    branches:
-      - main
+    branches-ignore:
+      - dev
+      - prod    
 jobs:
   release:
 
