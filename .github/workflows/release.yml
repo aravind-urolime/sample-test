@@ -4,11 +4,13 @@ on:
   push:
     tags:
       - "*"
+    branches:
+      - main
 jobs:
   release:
   
     runs-on: ubuntu-latest
-    if: startsWith(github.ref, 'refs/tags/') && github.ref == 'refs/tags/v*' && github.ref == 'refs/heads/main'
+  
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
