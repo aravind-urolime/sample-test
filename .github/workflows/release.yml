@@ -5,8 +5,7 @@ on:
     tags:
       - "*"
     branches:
-      - dev
-      - prod  
+      - dummy  
     paths:
       - '**' 
 jobs:
