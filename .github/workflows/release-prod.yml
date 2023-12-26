@@ -1,23 +1,17 @@
-name: Tag and Release Pipeline - Main
+name: Prod Manual Trigger and release pipeline
 
 on:
-  push:
-    tags:
-      - "*"
+  workflow_dispatch:
     branches:
-      - dev
-    paths:
-      - '**' 
+      - prod
+
 jobs:
   release:
-  
+
     runs-on: ubuntu-latest
-  
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
 
       - name: Echo success message
         run: echo "Repository successfully checked out!"
-
- 
