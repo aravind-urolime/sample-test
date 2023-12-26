@@ -4,13 +4,13 @@ on:
   push:
     tags:
       - "*"
-    branches-ignore:
-      - dev
-      - prod    
+    branches:
+      - main  
 jobs:
   release:
-
+  
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
 
     steps:
       - name: Checkout repository
