@@ -1,1 +1,2 @@
 .github/workflows/release-final.yml merge=ours
+.github/workflows/ask.yml merge=ours
